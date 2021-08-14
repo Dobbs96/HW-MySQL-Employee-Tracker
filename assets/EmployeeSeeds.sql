@@ -12,7 +12,7 @@ VALUES ("John", "Doe", 3, 1);
 
 
 --              SELECTS --
---ALL--
+-- ALL --
 
 SELECT * FROM roles;
 SELECT * FROM employees;
@@ -53,16 +53,34 @@ SELECT roles.id, roles.title FROM roles;
 
 --              UPDATES --
 
--- UPDATE Role --
+-- UPDATE First Name --
+
+-- UPDATE Last Name --
+
+-- UPDATE Title --
+
+-- UPDATE Salary --
+
+-- UPDATE Department --
 
 -- UPDATE Manager --
 
--- UPDATE Name --
-
 --              DELETE --
 
+-- Remove Department --
+-- Remove Role --
 -- Remove Employee --
 
 --              ADD --
 
--- Add Employee --
+-- -- Add Department --
+-- INSERT INTO departments (department)
+-- VALUES  ("Debuggers");
+
+-- -- Add Role --
+-- INSERT INTO roles (title, salary, department_id)
+-- VALUES ("Lead Debugger", 77000, 6);
+
+-- -- Add Employee --
+-- INSERT INTO employees (first_name, last_name, role_id, manager_id)
+-- VALUES ("Jane", "Doe", 7, null);
