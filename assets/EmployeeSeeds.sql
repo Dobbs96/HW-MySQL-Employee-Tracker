@@ -12,6 +12,8 @@ VALUES ("John", "Doe", 3, 1);
 
 
 --              SELECTS --
+-- Single --
+SELECT * FROM employees WHERE id = 1;
 -- ALL --
 
 SELECT * FROM roles;
@@ -54,22 +56,25 @@ SELECT roles.id, roles.title FROM roles;
 --              UPDATES --
 
 -- UPDATE First Name --
+UPDATE employees SET first_name = 'Johnny' WHERE id = 7;
 
 -- UPDATE Last Name --
+UPDATE employees SET last_name = 'Rocket' WHERE id = 7;
 
 -- UPDATE Title --
-
--- UPDATE Salary --
-
--- UPDATE Department --
+UPDATE employees SET title = 10 WHERE id = 4;
 
 -- UPDATE Manager --
+UPDATE employees SET manager_id = 4 WHERE id = 7;
 
 --              DELETE --
 
 -- Remove Department --
+DELETE FROM departments WHERE id = 9;
 -- Remove Role --
+DELETE FROM roles WHERE id = 18;
 -- Remove Employee --
+DELETE FROM employees WHERE id = 3;
 
 --              ADD --
 
