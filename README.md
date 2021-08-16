@@ -22,7 +22,9 @@ For more information please check [GitHub Licensing](https://docs.github.com/en/
 
 ## Acknowledgments
 
-Please check out [Bradtraversy](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3).
+- Please check out [Bradtraversy](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3).
+
+- [mysql](https://github.com/mysqljs/mysql#performing-queries)
 
 ## Questions
 

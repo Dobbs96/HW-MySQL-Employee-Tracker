@@ -19,29 +19,29 @@ SELECT * FROM employees WHERE id = 1;
 SELECT * FROM roles;
 SELECT * FROM employees;
 
--- View All Employees join -- 
-SELECT employees.id, employees.first_name, employees.last_name, roles.title, roles.salary, departments.department, employees.manager_id
-FROM employees
-INNER JOIN roles on roles.id = employees.role_id
-INNER JOIN departments on departments.id = roles.department_id
-ORDER BY employees.id;
+-- View All Employees join -- USE THIS TO SELECT WHAT YOU NEED FROM FULL LIST --
+SELECT employees.id,  CONCAT(employees.first_name, " " , employees.last_name) AS full_name, roles.title, roles.salary, departments.department, CONCAT(employee.first_name, ' ' ,employee.last_name) AS manager 
+FROM employees 
+INNER JOIN roles on roles.id = employees.role_id 
+INNER JOIN departments on departments.id = roles.department_id 
+LEFT JOIN employees employee on employees.manager_id = employee.id;
 
 -- View All Employees by Department -- 
-SELECT employees.id, employees.first_name, employees.last_name, departments.department
+SELECT employees.id, CONCAT(employees.first_name, " ", employees.last_name) AS full_name, departments.department
 FROM employees
 INNER JOIN roles on roles.id = employees.role_id
 INNER JOIN departments on departments.id = roles.department_id
 ORDER BY employees.id;
 
 -- View All Employees by Manager --
-SELECT employees.id, employees.first_name, employees.last_name, employees.manager_id
-FROM employees
-INNER JOIN roles on roles.id = employees.role_id
-INNER JOIN departments on departments.id = roles.department_id
-ORDER BY employees.id;
+SELECT employees.id,  CONCAT(employees.first_name, " " , employees.last_name) AS full_name, CONCAT(employee.first_name, ' ' ,employee.last_name) AS manager 
+FROM employees 
+INNER JOIN roles on roles.id = employees.role_id 
+INNER JOIN departments on departments.id = roles.department_id 
+LEFT JOIN employees employee on employees.manager_id = employee.id;
 
 -- View All Employees by Title -- 
-SELECT employees.id, employees.first_name, employees.last_name, roles.title
+SELECT employees.id, CONCAT(employees.first_name, " ", employees.last_name) AS full_name, roles.title
 FROM employees
 INNER JOIN roles on roles.id = employees.role_id
 INNER JOIN departments on departments.id = roles.department_id
@@ -52,6 +52,12 @@ SELECT * FROM departments;
 
 -- View All Roles -- 
 SELECT roles.id, roles.title FROM roles;
+
+-- View Total Pay Out to Employees --
+SELECT SUM(salary) AS Total_Salary
+FROM employees
+INNER JOIN roles on roles.id = employees.role_id
+ORDER BY employees.id;
 
 --              UPDATES --
 
