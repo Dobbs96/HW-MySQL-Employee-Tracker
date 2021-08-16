@@ -15,5 +15,17 @@ const connection = mysql.createConnection({
 connection.connect((err) => {
   if (err) throw err;
   console.log(`connected as id ${connection.threadId}`);
-  connection.end();
+  afterConnection("Electronic");
 });
+/////////  ^^^^ALL artist with Electronic as genre ^^^   ///////////////
+const afterConnection = (genre) => {
+  connection.query(
+    "SELECT artist FROM songs WHERE genre = ?",
+    [genre],
+    (err, res) => {
+      if (err) throw err;
+      console.log(res);
+      connection.end();
+    }
+  );
+};

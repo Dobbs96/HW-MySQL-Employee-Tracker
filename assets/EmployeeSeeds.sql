@@ -74,13 +74,13 @@ SELECT roles.id, roles.title FROM roles;
 --              ADD --
 
 -- -- Add Department --
--- INSERT INTO departments (department)
--- VALUES  ("Debuggers");
+INSERT INTO departments (department)
+VALUES  ("Debuggers");
 
 -- -- Add Role --
--- INSERT INTO roles (title, salary, department_id)
--- VALUES ("Lead Debugger", 77000, 6);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Lead Debugger", 93000, 6);
 
 -- -- Add Employee --
--- INSERT INTO employees (first_name, last_name, role_id, manager_id)
--- VALUES ("Jane", "Doe", 7, null);
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
+VALUES ("Jane", "Doe", 15, null);
