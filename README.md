@@ -13,12 +13,20 @@ For more information please check [GitHub Licensing](https://docs.github.com/en/
 ## Table of Contents
 
 - [Tests](#tests)
+- [Usage](#usage)
 - [Acknowledgments](#acknowledgments)
 - [Questions](#questions)
 
 ## Tests
 
-![Comming Soon]()
+![Comming Soon](./assets/Test_Employee_Tracker.gif)
+
+## Usage
+
+Feel free to clone repo.
+
+- Once cloned dont forget to npm i to download all package.json
+- Once downloaded type npm test to try it out
 
 ## Acknowledgments
 

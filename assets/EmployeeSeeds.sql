@@ -20,11 +20,11 @@ SELECT * FROM roles;
 SELECT * FROM employees;
 
 -- View All Employees join -- USE THIS TO SELECT WHAT YOU NEED FROM FULL LIST --
-SELECT employees.id,  CONCAT(employees.first_name, " " , employees.last_name) AS full_name, roles.title, roles.salary, departments.department, CONCAT(employee.first_name, ' ' ,employee.last_name) AS manager 
+SELECT employees.id,  CONCAT(employees.first_name, " " , employees.last_name) AS full_name, roles.title, roles.salary, departments.department, CONCAT(mgr.first_name, ' ' ,mgr.last_name) AS manager 
 FROM employees 
 INNER JOIN roles on roles.id = employees.role_id 
 INNER JOIN departments on departments.id = roles.department_id 
-LEFT JOIN employees employee on employees.manager_id = employee.id;
+LEFT JOIN employees mgr on employees.manager_id = mgr.id;
 
 -- View All Employees by Department -- 
 SELECT employees.id, CONCAT(employees.first_name, " ", employees.last_name) AS full_name, departments.department
