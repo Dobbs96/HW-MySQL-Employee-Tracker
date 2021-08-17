@@ -27,6 +27,7 @@ Feel free to clone repo.
 
 - Once cloned dont forget to npm i to download all package.json
 - Once downloaded type npm test to try it out
+- Also you will need MySQL Workbench open and instal assets Schema and Seeds to have the basic info.
 
 ## Acknowledgments
 
