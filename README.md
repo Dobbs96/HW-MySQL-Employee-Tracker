@@ -21,6 +21,8 @@ For more information please check [GitHub Licensing](https://docs.github.com/en/
 
 ![Comming Soon](./assets/Test_Employee_Tracker.gif)
 
+For full video please [click here](https://drive.google.com/file/d/1RapIp4AbJtTq20_aSRhDSQ25CNfjkqk4/view)
+
 ## Usage
 
 Feel free to clone repo.
